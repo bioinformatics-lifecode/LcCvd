@@ -561,6 +561,36 @@ def generate_html(file_path, output_path=None, coverage_metrics_path=None):
             outline: none;
             box-shadow: 0 0 0 2px rgba(166, 206, 77, 0.3);
         }}
+
+        /* CNV Button Styles */
+        .cnv-button {{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--orange);
+            color: var(--white-bg);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-left: 10px;
+            text-decoration: none;
+        }}
+        
+        .cnv-button:hover {{
+            background-color: #e67e22;
+            color: var(--white-bg);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }}
+        
+        .cnv-button:focus {{
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(243, 146, 55, 0.3);
+        }}
         
         .filters-panel {{
             position: absolute;
@@ -1077,6 +1107,12 @@ def generate_html(file_path, output_path=None, coverage_metrics_path=None):
                 padding: 6px 12px;
                 font-size: 13px;
             }}
+
+            .cnv-button {{
+                margin-left: 5px;
+                padding: 6px 12px;
+                font-size: 13px;
+            }}
         }}
     </style>
 </head>
@@ -1265,6 +1301,12 @@ def generate_html(file_path, output_path=None, coverage_metrics_path=None):
                     <a href="{sample_name}.IGV.html" target="_blank" class="igv-button" title="Open IGV Viewer">
                         <i class="fas fa-chart-area"></i>
                         IGV
+                    </a>
+                    
+                    <!-- CNV Button -->
+                    <a href="{sample_name}_CNV.html" target="_blank" class="cnv-button" title="Open CNV Report">
+                        <i class="fas fa-dna"></i>
+                        CNV Report
                     </a>
                     
                     <div id="filtersPanel" class="filters-panel">
