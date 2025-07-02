@@ -1772,7 +1772,7 @@ def generate_html(file_path, output_path=None, coverage_metrics_path=None):
                         150,  // HGVS CODING
                         115,  // INHERITANCE
                         140,  // EFFECT
-                        55,   // EXON (new)
+                        60,   // EXON (new)
                         100,  // ZYGOSITY
                         100,  // GNOMAD
                         145,  // ALLELIC BALANCE
@@ -2249,7 +2249,7 @@ def generate_html(file_path, output_path=None, coverage_metrics_path=None):
                     // ZYGOSITY
                     const zygosityCell = document.createElement('td');
                     zygosityCell.className = 'col-zygosity';
-                    zygosityCell.textContent = getVariantValue(variant, 'Otherinfo');
+                    zygosityCell.textContent = getVariantValue(variant, 'AF');
                     row.appendChild(zygosityCell);
                     
                     // GNOMAD
