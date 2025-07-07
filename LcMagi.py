@@ -187,7 +187,6 @@ def process_vus_classification(input_file, output_file=None):
     if len(vus_indices) == 0:
         print("No VUS variants found. Check the ACMG column values.")
         print("Available ACMG values:", df['ACMG'].value_counts())
-        return
     
     # Add new column for criteria parsing (optional - for analysis)
     df['ACMG_Criteria_Parsed'] = ''
