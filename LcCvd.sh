@@ -41,10 +41,10 @@ conda run -n FASTP fastp -i ${sample}_1.fq.gz -I ${sample}_2.fq.gz \
 	-h ${sample}_trim_report.html
 
 # Trimming automated
-conda run -n FASTP fastp -i ${sample}_1.fq.gz -I ${sample}_2.fq.gz \
-	-o ${sample}_trimmed_1.fq.gz -O ${sample}_trimmed_2.fq.gz \
-	-w $THREADS -V \
-	-h ${sample}_trim_report.html
+#conda run -n FASTP fastp -i ${sample}_1.fq.gz -I ${sample}_2.fq.gz \
+#	-o ${sample}_trimmed_1.fq.gz -O ${sample}_trimmed_2.fq.gz \
+#	-w $THREADS -V \
+#	-h ${sample}_trim_report.html
 
 mkdir trimmed
 mv ${sample}_trimmed* trimmed
